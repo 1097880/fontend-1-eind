@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact &bull; VentureValley</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <script src="https://kit.fontawesome.com/1fe3729de2.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        <div class="empty-element"></div>
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="#" class="nav-button">Link</a>
+        <a href="#" class="nav-button">Link</a>
+        <a href="#" class="nav-button">Link</a>
+        <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+
+    <header style="padding: 50px 20px;">
+        <div class="center-container-header">
+            <h1>Contact</h1>
+            <p style="margin-bottom: 0;">Do you have a question or problem regarding VentureValley? Our Guest Service is
+                ready for you! Leave your question here and someone from our Guest Service will help you with your
+                question as soon as possible!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="center-container">
+            <section class="contact-section">
+                <h2>Contact Us Now!</h2>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-row-50">
+                            <label for="firstname">First Name</label>
+                            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                        </div>
+                        <div class="form-row-50">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row-100">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="john@smith.com" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-row-50">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Address" required>
+                        </div>
+                        <div class="form-row-50">
+                            <label for="date">Date of Birth</label>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row-100">
+                        <label for="subject">Subject</label>
+                        <select name="subject" id="subject" required>
+                            <option value="" disabled selected>Select a subject...</option>
+                            <option value="general">General</option>
+                            <option value="payments">Payments</option>
+                            <option value="applications">Applications</option>
+                        </select>
+                    </div>
+                    <div class="form-row-100">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+                    <div class="form-row-100">
+                        <label>Subscribe to newsletter?</label>
+                        <div class="form-row-radio">
+                            <div>
+                                <input type="radio" name="newsletter" id="yes" value="yes" required>
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="newsletter" id="no" value="no">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row-terms">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms">I agree with the Terms and Conditions</label>
+                    </div>
+                    <button type="submit">Send <i class='fas fa-angle-right'></i></button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-column">
+                <img src="img/logo_small.png" alt="Logo">
+                © Copyright 2022-2024 VentureValley
+                <div class="social-menu">
+                    <a href="https://www.instagram.com/venturevalleymc" target="_blank"><i
+                            class="fa-brands fa-instagram footer-icon"></i></a>
+                    <a href="https://www.tiktok.com/@venturevalley" target="_blank"><i
+                            class="fa-brands fa-tiktok footer-icon"></i></a>
+                    <a href="https://www.youtube.com/@venturevalley" target="_blank"><i
+                            class="fa-brands fa-youtube footer-icon"></i></a>
+                    <a href="https://www.twitch.tv/venturevalleymc" target="_blank"><i
+                            class="fa-brands fa-twitch footer-icon"></i></a>
+                    <a href="https://discord.venturevalleymc.nl" target="_blank"><i
+                            class="fa-brands fa-discord footer-icon"></i></a>
+                </div>
+            </div>
+            <div class="right-column">
+                <a href="#" class="footer-button">Privacy Statement</a>
+                <a href="#" class="footer-button">Terms and Conditions</a>
+                <a href="#" class="footer-button">Cookie Policy</a>
+                <a href="contact.html" class="footer-button">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
