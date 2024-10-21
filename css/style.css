@@ -1,0 +1,645 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-text-normal: #4d3928;
+
+    --color-primary-normal: #00aaaa;
+    --color-primary-secondary: #008888;
+
+    --color-star-normal: #808080;
+    --color-star-filled: #ffd700;
+
+    --color-form-border-normal: #d3d3d3;
+    --color-form-border-valid: #55ff55;
+    --color-form-border-invalid: #ff5555;
+
+    --color-footer-background: #006666;
+
+    --color-darkmode-page-background: #121212;
+    --color-darkmode-review-background: #222222;
+    --color-darkmode-form-border-normal: darkgray;
+    --color-darkmode-footer-background: #001731;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fa-angle-right {
+    margin-left: 12px;
+}
+
+body {
+    font-family: "Poppins", Helvetica, sans-serif;
+    color: var(--color-text-normal);
+
+    margin: 0;
+}
+
+h1 {
+    font-family: "Amaranth";
+    font-size: 2.5rem;
+
+    animation: popin 1s ease-out 0s forwards;
+
+    margin: 0;
+}
+
+h2 {
+    font-family: "Amaranth";
+    font-size: 2.25rem;
+    color: var(--color-primary-normal);
+
+    margin: 0;
+}
+
+h3 {
+    font-family: "Amaranth";
+    font-size: 1.75rem;
+    color: var(--color-primary-normal);
+
+    margin: 0;
+}
+
+.center-container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/*
+    NAVIGATION
+*/
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+nav img {
+    width: 200px;
+}
+
+nav .empty-element {
+    flex: 1
+}
+
+nav a.nav-button {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text-normal);
+    border-radius: 5px;
+
+    transition: 0.3s;
+
+    padding: 12px 24px;
+}
+
+nav a.nav-button:hover {
+    background-color: var(--color-primary-normal);
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header-bg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #ffffff;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+
+    padding: 150px 0;
+}
+
+header p {
+    scale: 0;
+    animation: popin 1s ease-out 0.5s forwards;
+
+    margin-bottom: 36px;
+}
+
+header .center-container-header div {
+    scale: 0;
+    animation: popin 1s ease-out 1s forwards;
+}
+
+header a {
+    font-family: "Amaranth";
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+
+    transition: background-color 0.3s;
+
+    padding: 12px 24px;
+    margin: 0 10px;
+}
+
+header a:hover {
+    background-color: #FFFFFF40;
+}
+
+.center-container-header {
+    text-align: center;
+
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* 
+    HOME PAGE
+*/
+
+.attractions-section {
+    padding: 50px 0;
+}
+
+.attractions-container {
+    display: grid;
+    grid-template-rows: 400px 400px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+    padding: 25px 0;
+}
+
+.attractions-container article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+    color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+    height: 400px;
+
+    transition: background-position 0.3s;
+    cursor: pointer;
+
+    padding: 20px;
+}
+
+.attractions-container article:hover {
+    background-position: bottom;
+}
+
+.attractions-container article h3 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+#attractions-fireforest {
+    background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url(../img/fireforest--600.png);
+}
+
+#attractions-dwarfsquest {
+    background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url(../img/dwarfsquest--600.png);
+}
+
+#attractions-woodytrail {
+    background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url(../img/woodytrail--600.png);
+}
+
+#attractions-flyingdutchman {
+    background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url(../img/flyingdutchman--600.png);
+}
+
+#attractions-damuwar {
+    background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url(../img/damuwar--600.png);
+}
+
+#attractions-treasurehunt {
+    background-image: linear-gradient(180deg, #00000000 70%, #000000 100%), url(../img/treasurehunt--600.png);
+}
+
+.review-section {
+    padding: 50px 0;
+}
+
+.review-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding: 25px 0;
+}
+
+.review-container article {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s;
+    cursor: pointer;
+
+    padding-bottom: 20px;
+}
+
+.review-container article:hover {
+    scale: 0.975;
+    rotate: 0.5deg;
+}
+
+.review-container article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 3px 3px 0 0;
+}
+
+.review-container article .star {
+    font-size: 1.5rem;
+    color: var(--color-star-normal);
+}
+
+.review-container article .star.filled {
+    color: var(--color-star-filled);
+}
+
+.review-container article p {
+    margin: 0;
+}
+
+.review-container article .review-text {
+    flex: 1;
+
+    border-top: 2px solid #000000;
+
+    padding: 20px;
+}
+
+.review-container article .review-text h3 {
+    margin-bottom: 10px;
+}
+
+.review-container article .review-text p {
+    margin-top: 10px;
+}
+
+.review-container article a {
+    font-family: "Amaranth";
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+
+    background-color: var(--color-primary-normal);
+    border-radius: 5px;
+
+    width: fit-content;
+
+    transition: background-color 0.3s;
+
+    padding: 12px 24px;
+    margin: 0 20px;
+}
+
+.review-container article a:hover {
+    background-color: var(--color-primary-secondary);
+}
+
+/*
+    CONTACT PAGE
+*/
+
+.contact-section {
+    text-align: center;
+
+    padding: 50px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    text-align: left;
+
+    padding: 25px 0;
+}
+
+.contact-form .form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact-form .form-row-50 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+
+.contact-form .form-row-100 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-form .form-row-radio {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact-form .form-row-terms {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    margin: 20px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    font-size: 1rem;
+
+    color: var(--color-text-normal);
+    border: 2px solid var(--color-form-border-normal);
+    border-radius: 5px;
+    outline: none;
+
+    transition: box-shadow 0.3s;
+
+    padding: 10px;
+}
+
+input[type="date"] {
+    padding: 9px;
+}
+
+textarea {
+    font-family: "Poppins", Helvetica, sans-serif;
+    height: 120px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--color-primary-secondary);
+
+    scale: 1.5;
+}
+
+.contact-form button {
+    all: unset;
+    font-family: "Amaranth";
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+
+    background-color: var(--color-primary-normal);
+    border-radius: 5px;
+
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    padding: 12px 24px;
+}
+
+.contact-form button:hover {
+    background-color: var(--color-primary-secondary);
+}
+
+input:not([type="radio"], [type="checkbox"]):focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 3px 0px inset rgba(0, 0, 0, 0.25);
+}
+
+input:not([type="radio"], [type="checkbox"]):user-valid,
+select:user-valid,
+textarea:user-valid {
+    border: 2px solid var(--color-form-border-valid);
+}
+
+input:not([type="radio"], [type="checkbox"]):user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border: 2px solid var(--color-form-border-invalid);
+}
+
+/*
+    FOOTER
+*/
+
+footer {
+    font-size: 0.875rem;
+    color: #ffffff;
+    background-color: var(--color-footer-background);
+
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+footer .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1
+}
+
+footer img {
+    width: 60px;
+}
+
+footer .social-menu {
+    display: flex;
+    gap: 15px;
+
+    font-size: 1.6rem;
+}
+
+footer .social-menu .footer-icon {
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: 0.3s;
+}
+
+footer .social-menu .footer-icon:hover {
+    color: #ffffff;
+    scale: 0.9;
+}
+
+footer .right-column {
+    display: flex;
+    gap: 20px;
+}
+
+footer .right-column .footer-button {
+    text-decoration: none;
+    color: #ffffff;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+footer .right-column .footer-button::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-primary-normal);
+
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+
+    transition: width 0.3s;
+}
+
+footer .right-column .footer-button:hover:after {
+    width: 100%;
+}
+
+@keyframes popin {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@media (width <=480px) {
+    nav {
+        flex-direction: column;
+
+        padding: 10px 0;
+    }
+
+    nav .empty-element {
+        display: none;
+    }
+
+    nav a.nav-button {
+        text-align: center;
+
+        width: 90vw;
+    }
+
+    header {
+        padding: 50px 20px;
+    }
+
+    .attractions-section {
+        text-align: center;
+
+        padding: 50px 20px 0;
+    }
+
+    .review-section {
+        text-align: center;
+
+        padding: 50px 20px;
+    }
+
+    .review-container {
+        flex-direction: column;
+
+        text-align: left;
+    }
+
+    .contact-section {
+        padding: 50px 20px;
+    }
+
+    .contact-form .form-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    footer .right-column {
+        flex-direction: column;
+
+        margin-top: 30px;
+    }
+}
+
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color-darkmode-page-background);
+    }
+
+    nav a.nav-button {
+        color: #ffffff;
+    }
+
+    p {
+        color: #ffffff;
+    }
+
+    .review-container article {
+        background-color: var(--color-darkmode-review-background);
+        box-shadow: none;
+    }
+
+    .contact-form label {
+        color: #ffffff;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        color: #ffffff;
+        border: 2px solid var(--color-darkmode-form-border-normal);
+        background-color: var(--color-darkmode-review-background);
+    }
+
+    footer {
+        background-color: var(--color-darkmode-footer-background);
+    }
+
+    footer .right-column .footer-button::after {
+        background-color: var(--color-footer-background);
+    }
+} */
